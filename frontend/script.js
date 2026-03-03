@@ -2,10 +2,9 @@
  * Fire & Smoke Detector — Camera Frontend Logic
  */
 
-// Ganti URL ini dengan URL Hugging Face Space kamu setelah deploy
-// Contoh: "https://username-fire-smoke-detector.hf.space"
-// Untuk development lokal, gunakan: "http://localhost:7860"
-const API_URL = "http://localhost:7860";
+// URL Backend API (Hugging Face Spaces)
+// Untuk development lokal, ganti ke: "http://localhost:7860"
+const API_URL = "https://givaro-fire-smoke-detector.hf.space";
 
 // These will be set after DOM loads
 let webcamVideo, overlayCanvas, captureCanvas, cameraPrompt;
