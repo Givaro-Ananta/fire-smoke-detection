@@ -1,0 +1,43 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# ========================
+# Node.js
+# ========================
+node_modules/
+npm-debug.log*
+
+# ========================
+# Dataset & Model Files
+# ========================
+dataset/
+fire_smoke/
+fire_smoke-*/
+yolov8n.pt
+epoch*.pt
+last.pt
+runs/
+!runs/detect/
+!runs/detect/fire_smoke_detector/
+!runs/detect/fire_smoke_detector/**
+*.zip
+
+# ========================
+# IDE / OS
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store

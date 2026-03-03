@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Fire & Smoke Detector — AI Detection System</title>
+    <meta name="description" content="AI-powered fire and smoke detection system using YOLOv8 deep learning model.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background effects -->
+    <div class="bg-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🔥</span>
+                <div class="logo-text">
+                    <h1>Fire & Smoke Detector</h1>
+                    <p class="subtitle">AI-Powered Detection System — YOLOv8</p>
+                </div>
+            </div>
+            <div class="status-badge" id="statusBadge">
+                <span class="status-dot"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content full-screen-visuals">
+
+            <!-- Camera Container -->
+            <div class="camera-wrapper">
+                <video id="webcamVideo" autoplay muted></video>
+                <canvas id="overlayCanvas"></canvas>
+
+                <!-- Initial State Overlay -->
+                <div id="cameraPrompt" class="camera-prompt">
+                    <div class="upload-icon center-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                    </div>
+                    <h3 class="center-title">Camera Required</h3>
+                    <p class="center-text">Click below to grant camera access and start
+                        real-time detection</p>
+                    <button class="btn btn-primary center-btn" id="startCameraBtn">
+                        <span>Start Camera</span>
+                    </button>
+                </div>
+
+                <!-- Stats Panel (Overlay) -->
+                <div class="stats-panel glass-panel" id="statsPanel">
+                    <div class="stat-row">
+                        <span class="stat-icon">🔥</span>
+                        <div class="stat-info">
+                            <span class="stat-value" id="fireCount">0</span>
+                            <span class="stat-label">Fire</span>
+                        </div>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-icon">💨</span>
+                        <div class="stat-info">
+                            <span class="stat-value" id="smokeCount">0</span>
+                            <span class="stat-label">Smoke</span>
+                        </div>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-icon">⏱️</span>
+                        <div class="stat-info">
+                            <span class="stat-value" id="fpsCounter">0</span>
+                            <span class="stat-label">FPS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="captureCanvas" class="hidden-canvas"></canvas>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Fire & Smoke Detection System — Powered by YOLOv8 Deep Learning</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

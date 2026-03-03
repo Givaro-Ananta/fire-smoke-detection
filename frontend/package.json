@@ -1,0 +1,14 @@
+{
+    "name": "fire-smoke-frontend",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Premium Frontend for Fire & Smoke Detection System",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "vite": "^5.0.0"
+    }
+}
